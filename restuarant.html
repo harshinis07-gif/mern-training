@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delicious Bites</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff7f50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav {
+      background-color: #ffa07a;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .menu-section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .menu-section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .menu-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .item {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .item h3 {
+      margin: 10px 0 5px;
+    }
+
+    .item p {
+      color: #777;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Delicious Bites</h1>
+    <p>Your Favorite Food, Delivered Fresh</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section class="menu-section">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="item">
+        <img src="f1.jpg" alt="Pizza">
+        <h3>Breakfast</h3>
+        <p>Start your day with our energizing breakfast options like Idly sambar,Aloo Paratha ,pongal and Filter Coffee.</p>
+      </div>
+      <div class="item">
+        <img src="f4.jpg" alt="Burger">
+        <h3>Lunch</h3>
+        <p>Enjoy a wholesome Indian thali,briyani specials and paneer curries for fulfilling lunch experience.</p>
+      </div>
+      <div class="item">
+        <img src="f3.jpg" alt="Pasta">
+        <h3>Dinner</h3>
+        <p>Relax with our tasty tandoori dishes,dosa varities and warm desserts like Gulab Jamun to end your day.</p>
+      </div>
+      <div class="item">
+        <img src="f5.jpg" alt="Dessert">
+        <h3>Snacks and Juices</h3>
+        <p>Crunchy and spicy delights like samosa,pakoda,pav Bhaji -perfect for evening cravings and refresh yourself with Mango Lassi,Fresh Lime Soda,Sugarcane juice and seasonal fruit blends.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 Delicious Bites. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

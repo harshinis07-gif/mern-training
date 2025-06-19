@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Operators </title>
+</head>
+<body>
+  <h2>JavaScript Operators </h2>
+  <div id="out"></div>
+
+  <script>
+    const a = 10, b = 3;
+    let lines = [];
+
+    // Arithmetic
+    lines.push(`a + b = ${a + b}`);
+    lines.push(`a - b = ${a - b}`);
+    lines.push(`a * b = ${a * b}`);
+    lines.push(`a / b = ${(a / b).toFixed(2)}`);
+    lines.push(`a % b = ${a % b}`);
+    lines.push(`a ** b = ${a ** b}`);
+
+    // Assignment
+    let x = 5;
+    x += 2; lines.push(`x += 2 → ${x}`);
+    x *= 3; lines.push(`x *= 3 → ${x}`);
+    x -= 4; lines.push(`x -= 4 → ${x}`);
+    x /= 2; lines.push(`x /= 2 → ${x}`);
+    x %= 5; lines.push(`x %= 5 → ${x}`);
+
+    // Logical
+    const t = true, f = false;
+    lines.push(`t && f = ${t && f}`);
+    lines.push(`t || f = ${t || f}`);
+    lines.push(`!t = ${!t}`);
+
+    // Comparison for clarity
+    lines.push(`a > b = ${a > b}`);
+    lines.push(`a === "10" = ${a === "10"}`);
+    lines.push(`a == "10" = ${a == "10"}`);
+
+    document.getElementById('out').innerHTML = lines.join('<br>');
+  </script>
+</body>
+</html>
+
