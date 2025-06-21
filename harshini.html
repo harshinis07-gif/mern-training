@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link real="stylesheet" href="styleh.css">
+    </head>
+<body>
+    <p>I'm harshini</p>
+   <p>
+   The word <span class="emph" id="word1">important</span> is in red.
+</p>
+
+<style>
+  .emph { color: red; }
+</style>
+
+<script>
+  document.getElementById('word1')
+    .addEventListener('mouseover', () => {
+      alert('You hovered over "important"!');
+    });
+</script>
+</body>    
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Button Click Example</title>
+</head>
+<body>
+
+  <button onclick="showMessage()">Click Me!</button>
+
+  <script>
+    function showMessage() {
+      alert("Hello! You clicked the button.");
+    }
+  </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation Message</title>
+  <style>
+    #message {
+      color: red;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter your name:</h2>
+  <input type="text" id="nameInput" placeholder="Type your name here" />
+  <button onclick="checkInput()">Next</button>
+
+  <!-- This is where the message will be shown -->
+  <div id="message"></div>
+
+  <script>
+    function checkInput() {
+      const name = document.getElementById("nameInput").value;
+      const messageDiv = document.getElementById("message");
+
+      if (name.trim() === "") {
+        messageDiv.textContent = "⚠️ Please fill in the box before proceeding.";
+      } else {
+        messageDiv.textContent = ""; // clear any previous message
+        // You can also add success logic here
+        messageDiv.textContent = "✅ Thank you! Proceeding...";
+        messageDiv.style.color = "green";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Time (IST)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #istTime {
+      font-size: 24px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Current Indian Time (IST):</h2>
+  <div id="istTime"></div>
+
+  <script>
+    function updateIST() {
+      // Create a date object in UTC
+      const now = new Date();
+       const istOffset = 5.5 * 60 * 60 * 1000;
+      const istTime = new Date(now.getTime() + istOffset);
+
+      // Format time as HH:MM:SS
+      const hours = String(istTime.getUTCHours()).padStart(2, '0');
+      const minutes = String(istTime.getUTCMinutes()).padStart(2, '0');
+      const seconds = String(istTime.getUTCSeconds()).padStart(2, '0');
+
+      document.getElementById("istTime").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Update the clock every second
+    setInterval(updateIST, 1000);
+
+    // Initial call
+    updateIST();
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Example</title>
+</head>
+<body>
+
+  <button onclick="showMessage()">Click Me!</button>
+
+  <script>
+    function showMessage() {
+      alert("Hello! You clicked the button.");
+    }
+  </script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Validation Message</title>
+  <style>
+    #message {
+      color: red;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Enter your name:</h2>
+  <input type="text" id="nameInput" placeholder="Type your name here" />
+  <button onclick="checkInput()">Next</button>
+
+  <!-- This is where the message will be shown -->
+  <div id="message"></div>
+
+  <script>
+    function checkInput() {
+      const name = document.getElementById("nameInput").value;
+      const messageDiv = document.getElementById("message");
+
+      if (name.trim() === "") {
+        messageDiv.textContent = "⚠️ Please fill in the box before proceeding.";
+      } else {
+        messageDiv.textContent = ""; // clear any previous message
+        // You can also add success logic here
+        messageDiv.textContent = "✅ Thank you! Proceeding...";
+        messageDiv.style.color = "green";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Indian Time (IST)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    #istTime {
+      font-size: 24px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Current Indian Time (IST):</h2>
+  <div id="istTime"></div>
+
+  <script>
+    function updateIST() {
+      // Create a date object in UTC
+      const now = new Date();
+       const istOffset = 5.5 * 60 * 60 * 1000;
+      const istTime = new Date(now.getTime() + istOffset);
+
+      // Format time as HH:MM:SS
+      const hours = String(istTime.getUTCHours()).padStart(2, '0');
+      const minutes = String(istTime.getUTCMinutes()).padStart(2, '0');
+      const seconds = String(istTime.getUTCSeconds()).padStart(2, '0');
+
+      document.getElementById("istTime").textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Update the clock every second
+    setInterval(updateIST, 1000);
+
+    // Initial call
+    updateIST();
+  </script>
+
+</body>
+</html>
+
